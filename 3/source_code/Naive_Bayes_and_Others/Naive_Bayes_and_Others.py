@@ -42,10 +42,10 @@ df.head()
 # In[6]:
 
 
-import matplotlib.pyplot as plt
-fig = plt.figure(figsize=(8,6))
-df.groupby('target').text.count().plot.bar(ylim=0)
-plt.show()
+#import matplotlib.pyplot as plt
+#fig = plt.figure(figsize=(8,6))
+#df.groupby('target').text.count().plot.bar(ylim=0)
+#plt.show()
 
 
 # In[7]:
@@ -113,11 +113,11 @@ for model in models:
     entries.append((model_name, fold_idx, accuracy))
 cv_df = pd.DataFrame(entries, columns=['Model', 'fold_idx', 'Accuracy'])
 import seaborn as sns
-sns.boxplot(x='Model', y='Accuracy', data=cv_df)
-sns.stripplot(x='Model', y='Accuracy', data=cv_df, 
-              size=8, jitter=True, edgecolor="gray", linewidth=2)
-plt.title('Model Accuracy')
-plt.show()
+#sns.boxplot(x='Model', y='Accuracy', data=cv_df)
+#sns.stripplot(x='Model', y='Accuracy', data=cv_df, 
+#              size=8, jitter=True, edgecolor="gray", linewidth=2)
+#plt.title('Model Accuracy')
+#plt.show()
 count_vect = CountVectorizer()
 tfidf_transformer = TfidfTransformer()
 
@@ -194,8 +194,8 @@ rt_df
 # In[17]:
 
 
-sns.barplot(x='Model',y='Runtime',data=rt_df)
-plt.title('Model Runtimes')
+#sns.barplot(x='Model',y='Runtime',data=rt_df)
+#plt.title('Model Runtimes')
 
 
 # In[18]:
@@ -229,9 +229,9 @@ irt_df
 # In[21]:
 
 
-sns.catplot(x='Model', y='Runtime', data=irt_df)
-plt.title('Model Runtimes')
-plt.show()
+#sns.catplot(x='Model', y='Runtime', data=irt_df)
+#plt.title('Model Runtimes')
+#plt.show()
 
 
 # In[ ]:
