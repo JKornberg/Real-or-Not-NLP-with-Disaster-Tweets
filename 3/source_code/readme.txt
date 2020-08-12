@@ -27,5 +27,8 @@ python3 "bert/bert pretrain.py"
 python3 "bert/bert test.py"
 python3 "bert/bert train model.py"
 
+NOTE: Please run bert/bert pretrain.py BEFORE running LSTM as it does the same preprocessing
+
 To run the LSTM model from the source_code folder, run the command:
 python3 lstm/lstm.py
+
