@@ -11,7 +11,7 @@ import numpy as np
 # In[2]:
 
 
-df = pd.read_csv('Data/train.csv')
+df = pd.read_csv('../Data/train.csv')
 df.head()
 
 
@@ -131,7 +131,7 @@ cv_df.groupby('Model').Accuracy.mean()
 # In[12]:
 
 
-test_df = pd.read_csv('Data/test.csv')
+test_df = pd.read_csv('../Data/test.csv')
 
 
 # In[13]:
@@ -163,7 +163,7 @@ for model in models:
     solution_df['target'] = test_df.apply(lambda row : clf.predict(count_vect.transform([row['text']])), axis = 1)
     run_times.append((model_name,timeit.default_timer()-start))
     solution_df['target'] = solution_df.apply(lambda row : row['target'][0], axis=1)
-    solution_df.to_csv('Data/preds_'+model_name +'.csv', index= False)
+    solution_df.to_csv('../Data/preds_'+model_name +'.csv', index= False)
 
 
 # In[19]:

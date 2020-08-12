@@ -1,7 +1,7 @@
 All of this was run using Ubuntu on Windows in a Python virtual environment.
 
 1. Retrieve the dataset from Kaggle (https://www.kaggle.com/c/nlp-getting-started/data).
-2. Place test.csv and train.csv into a folder named "Data" in the same folder as the python files.
+2. Place test.csv and train.csv into a folder named "Data" in the source code folder
 3. Create a folder inside "Data" named "Processed"
 4. Run the following commands to install the required Python modules:
 pip install pytorch
